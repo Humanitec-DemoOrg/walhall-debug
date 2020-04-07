@@ -13,10 +13,8 @@ pipeline:
   # Drone is configured to use the Walhall registry by default, so no need to change anything.
   build-docker-image-tag:
     image: plugins/docker
-    registry:
-      from_secret: DOCKER_REGISTRY
-    repo:
-      from_secret: DOCKER_REPO
+    registry: harbor.walhall.io
+    repo: harbor.walhall.io/qa-public/walhall-debug
     username:
       from_secret: DOCKER_USERNAME
     password:
